@@ -1,0 +1,135 @@
+.app_container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-image: url("../assets/head.svg");
+}
+
+.start_button{
+    margin-left: 12%;
+    opacity: 1;
+    transition: opacity 2s, visibility 0s ease 2s ;    
+}
+
+.drinking_man{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+
+.fade_out_left{
+    transform-origin: right;
+    animation: fade_left 2s linear;    
+}
+.fade_in_left{
+    transform-origin: left;
+    animation: fade_left 2s linear;    
+}
+
+.shot_glass{
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+    transform-origin: center;
+    transform-box: fill-box;
+    transform: translate(50%,50%);
+    opacity: 1;
+    transition: opacity 2s;  
+}
+
+.disappear{
+    opacity: 0;
+}
+
+
+.fade_out_right{
+    transform-origin: left;
+    animation: fade_out_right 2s ease forwards;
+}
+.fade_in_right{
+    transform-origin: right;
+    animation: fade_in_right 2s ease forwards;
+}
+
+#first_grape{
+    animation: grape_anim 4s ease forwards;
+    transform-origin: center;
+    animation-delay: 1.9s;
+}
+
+.fab_back{
+    position: absolute;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    bottom: 0!important;
+    left: 0!important;
+}
+
+
+@keyframes fade_in_right{
+    0%{
+        transform: translateX(101%);
+        opacity: 0;
+        visibility: hidden;
+
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes fade_out_right{
+    0%{
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+
+    }
+    100%{
+        transform: translateX(101%);
+        opacity: 0;
+        visibility: hidden;
+
+    }
+}
+
+@keyframes grape_rotation{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grape_anim{
+    0%{
+        transform: translateX(0);
+    }
+
+    50%{
+        transform: translate(-10%,55px);
+    }
+    100%{
+        transform: translate(-50%,35px);
+    }
+}

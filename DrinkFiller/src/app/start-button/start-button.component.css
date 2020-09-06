@@ -1,0 +1,16 @@
+
+.btn{
+    letter-spacing: 8px;
+    font-family: consolas;
+    color: white;
+    padding: 20px 15px;
+    white-space: nowrap;
+    background-color: #6B62FF;
+    border-color: #6B62FF;
+}
+
+.btn:active:focus{
+
+    background-color: #6B62FF;
+    border-color: #6B62FF;
+}

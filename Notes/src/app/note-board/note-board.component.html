@@ -1,0 +1,29 @@
+<div class="note-container w-100 h-100 d-flex flex-column justify-content-start align-items-center">
+    <div class="row w-100">
+        <div class="col w-100 note-header d-flex justify-content-between align-items-center">
+            
+            <button mat-icon-button (click)="onDeleteButtonClick()" aria-label="Example icon button with a vertical three dot icon">
+                <mat-icon class="delete_button">delete_outline</mat-icon>
+            </button>
+    
+            <input class="note_title h-50" type="text"  [(ngModel)]='note.title' placeholder="Insert the title here">
+    
+            <button class="text_button" (click)="onSaveButtonClick()" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                save
+            </button>
+        </div>
+    </div>
+    <div class="row w-100 ">
+        <div class="col w-100 ">
+            <hr class="w-100 mb-1 mt-0">
+        </div>
+    </div>
+    <div class="row h-100 w-100 note-body">
+        <!-- <div class="col-12 m-0">
+            <textarea name="" id="" readonly></textarea>
+
+        </div> -->
+
+        <textarea class="form-control" placeholder="This is the best idea of my life...." [(ngModel)]='note.text'></textarea>
+    </div>
+</div>

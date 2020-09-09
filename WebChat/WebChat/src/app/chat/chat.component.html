@@ -1,0 +1,35 @@
+<div class="row-md main_row p-0 m-0 h-100 d-flex justify-content-center align-items-center">
+    <div class="col-md p-0 m-0 h-100 w-100 d-flex justify-content-center align-items-center">
+        <div class="chat_frame d-flex flex-column align-items-center">
+            <div class="row">
+                <div class="chat_header d-flex justify-content-center align-items-center">
+                    <h3 class="m-0">Connected with: {{interlocutor_id}}</h3>
+                </div>
+            </div>
+            <div class="row body_row overflow-auto flex-grow-1">
+                <div class="chat_body pl-2 pr-2">
+                    <div *ngFor="let msg of messages" class="row mt-1 mb-1 d-flex flex-column p-0 m-0">
+                        <div [ngClass]="(msg.from == user.socket_code) ? 'from_me' : 'incoming'" class="message pt-1 pb-0 pl-2 pr-2">
+                            <label *ngIf="(msg.from != user.socket_code)" class="m-0" for="sender">{{msg.from}}:</label>
+                            <br *ngIf="(msg.from != user.socket_code)">
+                            
+                            <label for="content">{{msg.content}}</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="chat_footer pl-4 pr-4 pt-2 pb-2 d-flex justify-content-center align-items-center">
+                    <input class="form-control flex-grow-1 mr-2" [(ngModel)]="new_text" placeholder="type your message here.." type="text">
+                    <button mat-mini-fab (click)="onSendClick()" class="ml-2" color="primary" aria-label="Example icon button with a menu icon">
+                        <mat-icon>send</mat-icon>
+                      </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <p>interlocutor: {{interlocutor_id}}</p>
+<button (click)="TestsendMsg()"></button>
+<p *ngFor="let msg of messages">{{msg.content}}</p> -->

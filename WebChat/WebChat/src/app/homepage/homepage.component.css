@@ -1,0 +1,23 @@
+.code_field:focus{
+    outline: none;
+}
+.code_field{
+    font-size: 17px;
+    text-align: center ;
+    padding: 10px 20px 10px 20px;
+    border-radius: 25px;
+    border: 2px solid #0075FF;
+    color: rgb(87, 160, 255);
+}
+
+.btn_start{
+    border-radius: 25px;
+    padding: 6px 35px 6px 35px;
+    
+}
+
+@media only screen and (max-width: 577px) {
+    .home_graphic{
+        display: none!important;
+    }
+  }

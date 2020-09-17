@@ -1,0 +1,3 @@
+<div *ngFor="let svg of svgs; let i = index" [style.top]="positions[i]" [style.animation-delay]="delays[i]" [style.animation-duration]="durations[i]" class="cloud">
+    <img src="{{svg}}" alt="">
+</div>

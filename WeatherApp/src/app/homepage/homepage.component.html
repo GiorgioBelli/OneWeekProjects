@@ -1,0 +1,25 @@
+<div class="d-flex h-100 flex-column align-items-center">
+    <app-header (onsearchchange)="onSearchChange($event)" class="w-100"></app-header>
+    <div class="card_container w-100 d-flex flex-column justify-content-around h-100">
+        <div *ngIf="first_half_cities.length > 0" class="row d-flex justify-content-around">
+            <div *ngFor="let city of first_half_cities" class="col-md d-flex flex-column align-items-center">
+                <mat-card (click)="onCardClick(city)">
+                    <img mat-card-lg-image class="w-100" src="../../assets/viterbo_card.jpeg">
+                    <mat-card-content>
+                        <h3>{{city.name}}</h3>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+        <div *ngIf="second_half_cities.length > 0" class="row mt-4 d-flex justify-content-around">
+            <div *ngFor="let city of second_half_cities" class="col-md d-flex flex-column align-items-center">
+                <mat-card (click)="onCardClick(city)">
+                    <img mat-card-lg-image class="w-100" src="../../assets/viterbo_card.jpeg">
+                    <mat-card-content>
+                        <h3>{{city.name}}</h3>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

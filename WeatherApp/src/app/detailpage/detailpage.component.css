@@ -1,0 +1,29 @@
+:host{
+    height: 100%;
+}
+
+label{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 62px;
+    line-height: 69px;
+    text-align: center;
+    letter-spacing: 0.33em;
+
+    color: #606060;
+}
+
+.week_weather{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em;
+    width: 80%;
+    border-radius: 25px;
+    background-color: #ffffffbf;
+    border: 1px solid #E6E6E6;
+    box-sizing: border-box;
+    box-shadow: 9px 6px 12px rgba(107, 107, 107, 0.25);
+
+}

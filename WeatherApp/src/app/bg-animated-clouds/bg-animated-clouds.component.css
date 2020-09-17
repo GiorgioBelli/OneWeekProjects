@@ -1,0 +1,21 @@
+.cloud{
+    z-index: -10;
+    position: absolute;
+    right: 100%;
+    opacity: 0;
+    animation: slide_left linear infinite;
+}
+
+@keyframes slide_left{
+    0%{
+        opacity: 0;
+        right: 100%;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        right: -1%;
+    }
+}

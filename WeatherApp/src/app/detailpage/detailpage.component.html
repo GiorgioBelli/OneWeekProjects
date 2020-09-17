@@ -1,0 +1,6 @@
+<div class="h-100 d-flex flex-column align-items-center justify-content-center">
+    <label class="mb-5">{{city_id}}</label>
+    <div class="mt-4 week_weather">
+        <app-day-card *ngFor="let day_weather of week_weather" [day_weather]="day_weather"></app-day-card>
+    </div>
+</div>
